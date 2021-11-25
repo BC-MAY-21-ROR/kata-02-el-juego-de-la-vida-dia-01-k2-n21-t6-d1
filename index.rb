@@ -14,14 +14,29 @@ class Life
     end
 
     def fill_grid
+        
         @height.times do |row|
             newRow = ""
             @width.times do |e|
+                if(@heigh.times && @width.times == @cel1[0] && @cel1[1])
+                    newRow << '*'
+                end
                 newRow << '.'
             end
             @grid.push(newRow)
         end
     end
+
+    def create_life
+    
+        @cel1 = [rand(0...(@height), rand(0...(@width)]
+        puts @cel1
+        
+=begin
+@cel2 = [rand(0...(@height), rand(0...(@width)]
+@cel3 = [rand(0...(@height), rand(0...(@width)]
+=end
+        
 
     def get_grid
         puts @grid
